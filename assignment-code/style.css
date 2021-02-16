@@ -1,0 +1,269 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	align-content: center;
+	background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(background.jpg);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	font-family: sans-serif;
+	height: auto;
+}
+
+h1
+{
+	text-align: center;
+	color: #fff;
+	margin-bottom: 70px;
+	font-size: 45px;
+	letter-spacing: 2px;
+
+}
+
+span
+{
+	color: #f44336;
+}
+
+.search-image
+{
+	height: 50px;
+	padding: 10px;
+	width: 400px;
+	border-radius: .25rem;
+}
+
+.search-btn
+{
+	height: 50px;
+	width: 150px;
+	background: #f44336;
+	border: none;
+	color: #fff;
+	font-weight: bold;
+	border-radius: .25rem
+}
+
+.search-btn:hover
+{
+	background: #bb0d00;
+	cursor: pointer;
+}
+
+.form-box
+{
+	background: rgba(255,255,255,0.5);
+	padding: 30px 50px;
+	margin-bottom: 20px;
+	align-items: center;
+	border-radius: .25rem;
+	width: fit-content;
+	margin: auto;
+	width: max-content ;
+}
+.image-retrieved
+{
+	background: rgba(255,255,255,0.5);
+	height: auto;
+	width: auto;
+	display: block;
+}
+#img-thumbnail-new
+{
+	height: 320px;
+	width: 320px;
+	margin-top: 30px;
+	object-fit: cover;
+}
+#img-thumbnail-new:hover
+{
+	color: #bb0d00;
+	cursor: pointer;
+	opacity: 0.7;
+}
+.author-image
+{
+	height: 100px;
+	width: 100px;
+	align-items:center;
+	border-radius: 50%;
+}
+
+.row .details-area
+{
+	background: rgba(255,255,255,1);
+	width: 320px;
+	height: auto;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding: 5px;
+}
+
+.pagination
+{
+	margin-top: 30px;
+	background: rgba(255,255,255,0.5);
+	padding: 10px 10px;
+	width: auto;
+	padding-right: 0px;
+
+}
+
+.page-item  
+{
+    position: relative;
+    display: block;
+    line-height: 1.25;
+    color: #f44336;
+    background: rgba(255,255,255,1);
+	padding: 10px 10px;
+	border-radius: .25rem;
+	width: auto;
+}
+.page-item a 
+{
+    position: relative;
+    display: block;
+    line-height: 1.25;
+    color: #f44336;
+    background: rgba(255,255,255,1);
+	padding: 10px 10px;
+	border-radius: .25rem;
+	width: auto;
+}
+#searchedImage {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#searchedImage:hover {opacity: 0.7;}
+
+/* The enlarged (background) */
+.enlarged {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* enlarged Content (image) */
+.enlarged-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of enlarged Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.enlarged-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close-new {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+
+a {
+  color: #369;
+}
+
+#drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 480px;
+  margin: 50px auto;
+  padding: 20px;
+}
+#drop-area.highlight {
+  border-color: purple;
+}
+p {
+  margin-top: 0;
+}
+.my-form {
+  margin-bottom: 10px;
+  color:#fff ;
+}
+#gallery {
+  margin-top: 10px;
+}
+#gallery img {
+  width: 150px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.button
+{
+	height: 50px;
+	width: 150px;
+	background: #f44336;
+	border: none;
+	color: #fff;
+	font-weight: bold;
+	border-radius: .25rem;
+	display: inline-block;
+	padding: 10px;
+}
+
+.button:hover
+{
+	background: #bb0d00;
+	cursor: pointer;
+}
+
+#fileElem {
+  display: none;
+}
+
+.main-buttons
+{
+	background: #fff;
+	padding: 20px;
+	border-radius: .25rem;
+	display: inline-block;
+}

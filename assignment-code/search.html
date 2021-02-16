@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Image</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container full-image-retrieve"> 
+		<div>
+				<div class="row justify-content-center">
+					<div class="col align-self-center">
+						<h1>Find an <span>Image</span></h1>
+						<div class="form-box">
+							<input type="text" id="search_image_text" class="search-image" placeholder="Search Free High Resolution Photos"/>
+							<button class="search-btn" onClick="SearchPhotos()">Search</button>
+						</div> 
+					</div>
+				</div>			
+				
+				<div class="row" id="result"></div>
+
+				<div class="row" id="newresult"></div>
+
+				<img id="searchedImage" onClick="EnlargePhoto(src)"></img>
+				<img id="searchedImage" onClick="EnlargePhotonew(src)"></img>
+					<div id="enlargedImage" class="enlarged">
+					  <span class="close-new ">&times;</span>
+					  <img class="enlarged-content" id="img01" height="500px" width="100%">
+					</div>
+
+				<div class="row justify-content-center" >	
+				  	<ul class="pagination justify-content-center">
+				  		<div class="col align-self-center">
+					    <li class="page-item">
+					      <a class="page-prev" href="#" onClick="javascript:prevPage()" id="btn_prev">Previous</a>
+					    </li>
+					    </div>
+					    <div class="col align-self-center">
+					    <li class="page-item">
+					    	<b class="page-current">Page <span id="page" class="page-link-new"></span></b>
+					    </li>
+					    </div>
+					    <div class="col align-self-center">
+					    <li class="page-item">
+					      <a class="page-next" href="#" onClick="javascript:nextPage()" id="btn_next">Next</a>
+					    </li>
+					</div>
+				  </ul>
+				</div>
+				<script src="search.js"></script>
+			</div>
+</div>
+	
+<script type="text/javascript">
+
+function validate_form ( textimage )
+{
+    valid = true;
+    var letters = /^[A-Za-z]+$/;
+    if ( document.search_form.search_image_text.value == "" )
+    {
+        alert ( "Please give the keyword for Image." );
+        valid = false;
+    }
+
+    else
+    {
+    	alert('Enter valid keyword only alphabets.')
+    	valid = false;
+    }
+    
+    return valid;
+}
+
+</script>
+</body>
+
+</html>
+
+
